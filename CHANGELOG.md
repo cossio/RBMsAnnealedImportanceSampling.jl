@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file. The format 
 
 ## Unreleased
 
-## v1.0.0
+## v1.0.0 (unreleased)
 
-- Release v1.0.0 and register package.
+## v0.1.0
+
+- Release v0.1.0 and register package.
+- Move AIS code from RBMs.jl to this package.
