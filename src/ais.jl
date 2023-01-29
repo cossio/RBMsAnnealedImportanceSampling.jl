@@ -76,7 +76,7 @@ end
 
 Reverse AIS estimator of the log-partition function of `rbm`.
 While `aise` tends to understimate the log of the partition function, `raise` tends to
-overstimate it. `v` must be an equilibrated sample from `rbm`.
+overestimate it. `v` must be an equilibrated sample from `rbm`.
 
 !!! tip Use [`logmeanexp`](@ref)
     If `F = raise(...)`, then `-logmeanexp(-F)`, using the function `logmeanexp`[@ref]
