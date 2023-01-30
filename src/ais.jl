@@ -34,23 +34,24 @@ an unbiased estimator of `Z1/Z0`, the ratio of partition functions of `rbm1` and
 """
 function ais(rbm0::RBM, rbm1::RBM, v::AbstractArray, βs::AbstractVector)
     @assert issorted(βs) && 0 == first(βs) ≤ last(βs) == 1
-    F = free_energy(rbm0, v)
+    F0 = free_energy(rbm0, v) # β = 0 case
+    F = zero(F0)
     for β in βs
-        if iszero(β) || isone(β)
-            continue
-        else
+        if 0 < β < 1
             rbm = anneal(rbm0, rbm1; β)
-            F -= free_energy(rbm, v)
+            F_prev = free_energy(rbm, v)
             v = sample_v_from_v(rbm, v)
-            F += free_energy(rbm, v)
+            F_next = free_energy(rbm, v)
+            F += F_next - F_prev
         end
     end
-    F -= free_energy(rbm1, v)
+    F1 = free_energy(rbm1, v) # β = 1 case
+    F += F0 - F1
     return F
 end
 
 function ais(rbm0::RBM, rbm1::RBM, v0::AbstractArray; nbetas::Int=2)
-    βs = range(0, 1, nbetas)
+    βs = range(0, 1; length = nbetas)
     return ais(rbm0, rbm1, v0, βs)
 end
 
