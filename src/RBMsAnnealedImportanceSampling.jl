@@ -8,6 +8,7 @@ using RestrictedBoltzmannMachines: RBM, AbstractLayer,
     cgf, free_energy, sample_v_from_v, sample_from_inputs
 
 include("ais.jl")
+include("anneal.jl")
 include("util.jl")
 
 end # module
