@@ -12,7 +12,7 @@ RestrictedBoltzmannMachines = "12e6b396-7db5-4506-8cb6-664a4fe1e50e"
 Statistics = "10745b16-79ce-11e8-11f9-7d13ad32a3b2"
 
 [compat]
-FillArrays = "0.12, 0.13"
+FillArrays = "0.12, 0.13, 1"
 LogExpFunctions = "0.3"
 RestrictedBoltzmannMachines = "1, 2"
 julia = "1.8"
