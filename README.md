@@ -31,6 +31,8 @@ Centered RBMs:
 
 ## Citation
 
-This code is released as part of the supporting materials of https://arxiv.org/abs/2206.11600. If you use this package in a publication, please cite:
+If you use this package in a publication, please cite:
 
-* Fernandez-de-Cossio-Diaz, Jorge, Simona Cocco, and Remi Monasson. "Disentangling representations in Restricted Boltzmann Machines without adversaries." arXiv:2206.11600 (2022)
+* Jorge Fernandez-de-Cossio-Diaz, Simona Cocco, and Remi Monasson. "Disentangling representations in Restricted Boltzmann Machines without adversaries." Physical Review X 13, 021003 (2023).
+
+Or you can use the included [CITATION.bib](https://github.com/cossio/RestrictedBoltzmannMachines.jl/blob/master/CITATION.bib).
