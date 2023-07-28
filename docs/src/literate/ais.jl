@@ -9,7 +9,7 @@ import MLDatasets
 import Makie
 import CairoMakie
 using Statistics: mean, std, middle
-using RBMsAnnealedImportanceSampling: aise, raise, logmeanexp, logstdexp
+using RBMsAnnealedImportanceSampling: aise, raise, logmeanexp
 using RestrictedBoltzmannMachines: Binary, BinaryRBM, initialize!, pcd!, sample_v_from_v
 
 # Load MNIST (0 digit only).

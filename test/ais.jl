@@ -1,11 +1,10 @@
 using Test: @test, @testset, @inferred
 using Statistics: mean, std, var
 using Random: bitrand
-using LogExpFunctions: logsumexp
 using RBMsAnnealedImportanceSampling: anneal, anneal_zero, ais, aise, raise, log_partition_zero_weight
 using RestrictedBoltzmannMachines: RBM, BinaryRBM, Binary, Spin, Potts, Gaussian, ReLU, dReLU, xReLU, pReLU,
     energy, free_energy, sample_from_inputs, sample_v_from_v,
-    logmeanexp, logvarexp, logstdexp, log_partition
+    logmeanexp, log_partition
 
 @testset "log_partition_zero_weight" begin
     rbm0 = BinaryRBM(randn(3), randn(2), zeros(3,2))

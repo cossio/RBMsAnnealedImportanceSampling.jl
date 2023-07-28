@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file. The format 
 
 ## Unreleased
 
+- Use `LogStatFunctions`.
+- BREAKING: Remove `logvarexp`, `logstdexp`. These functions are now in `LogStatFunctions`.
+
 ## v1.0.0
 
 - Register at https://github.com/cossio/CossioJuliaRegistry.
