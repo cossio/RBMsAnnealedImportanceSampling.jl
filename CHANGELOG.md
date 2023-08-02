@@ -4,14 +4,16 @@ All notable changes to this project will be documented in this file. The format 
 
 ## Unreleased
 
+## 2.0.0
+
 - Use `LogStatFunctions`.
 - BREAKING: Remove `logvarexp`, `logstdexp`. These functions are now in `LogStatFunctions`.
 
-## v1.0.0
+## 1.0.0
 
 - Register at https://github.com/cossio/CossioJuliaRegistry.
 
-## v0.1.0
+## 0.1.0
 
 - Release v0.1.0 and register package.
 - Move AIS code from RBMs.jl to this package.
