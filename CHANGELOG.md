@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. The format 
 
 ## Unreleased
 
+## 2.0.1
+
+- Just to add a git tag. No changes.
+
 ## 2.0.0
 
 - Use `LogStatFunctions`.
