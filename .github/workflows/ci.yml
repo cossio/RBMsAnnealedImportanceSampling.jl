@@ -17,13 +17,13 @@ jobs:
         arch:
           - x64
     steps:
-      - uses: actions/checkout@v3
-      - uses: julia-actions/setup-julia@v1
+      - uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608
+      - uses: julia-actions/setup-julia@f40c4b69330df1d22e7590c12e76dc2f9c66e0bc
         with:
           version: ${{ matrix.version }}
           arch: ${{ matrix.arch }}
-      - uses: julia-actions/cache@v1
+      - uses: julia-actions/cache@569d290d51d6c22c1cd4ceec591a1bf112aab9c0
       - run: julia --color=yes --project=.ci/ -e 'import Pkg; Pkg.Registry.add(Pkg.RegistrySpec(url="https://github.com/cossio/CossioJuliaRegistry.git"))'
         shell: bash
-      - uses: julia-actions/julia-buildpkg@latest
-      - uses: julia-actions/julia-runtest@latest
+      - uses: julia-actions/julia-buildpkg@00f9fd6b2600be0a8d80566dd4d4d2389b3468eb
+      - uses: julia-actions/julia-runtest@79a7e100883947123f8263c5f06e6c0ea3eb972f
